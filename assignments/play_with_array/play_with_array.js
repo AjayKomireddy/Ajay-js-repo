@@ -7,18 +7,25 @@ function getEven(arr) {
 
         Write you code below
     */
-
+    // var newArr=[]
+    // for(var i=0;i<arr.length;i++){
+    //     if(arr[i]%2==0){
+    //         newArr.push(arr[i])
+    //     }
+    // }
+    // return newArr
+    const result = arr.filter(num => num%2==0);
+    return result
 }
 
 function multiplyByN(arr, n) {
-    /* 
-        Return an array whose elements are multiplied by n
-        Example
-            Input: [1,3,4,55], 3
-            Output: [3,9,13,165]
-        Write you code below
-    */
+  
+    function multi(num){
+        return num*n;
+    }
+    return arr.map(multi);
 }
+
 
 function removeNthElement(arr, n) {
     /*
@@ -28,6 +35,13 @@ function removeNthElement(arr, n) {
             Output: [1,3,4,7]
         Write you code below
     */
+    var newArr2=[]
+    for(var i=0;i<arr.length;i++){
+        if(i!=n){
+            newArr2.push(arr[i])
+        }   
+    }
+    return newArr2
 }
 
 module.exports = {
